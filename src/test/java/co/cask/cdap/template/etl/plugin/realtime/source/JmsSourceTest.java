@@ -17,10 +17,10 @@
 package co.cask.cdap.template.etl.plugin.realtime.source;
 
 import co.cask.cdap.api.data.format.StructuredRecord;
+import co.cask.cdap.template.etl.api.Emitter;
+import co.cask.cdap.template.etl.api.realtime.SourceState;
 import co.cask.cdap.template.etl.plugin.MockRealtimeContext;
 import co.cask.cdap.template.etl.plugin.realtime.jms.JmsProvider;
-import co.cask.cdap.templates.etl.api.Emitter;
-import co.cask.cdap.templates.etl.api.realtime.SourceState;
 import com.google.common.collect.Lists;
 import org.junit.After;
 import org.junit.Assert;

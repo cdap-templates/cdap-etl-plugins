@@ -23,14 +23,13 @@ import co.cask.cdap.api.data.format.StructuredRecord;
 import co.cask.cdap.api.data.schema.Schema;
 import co.cask.cdap.api.templates.plugins.PluginConfig;
 import co.cask.cdap.api.templates.plugins.PluginProperties;
+import co.cask.cdap.template.etl.api.Emitter;
+import co.cask.cdap.template.etl.api.PipelineConfigurer;
+import co.cask.cdap.template.etl.api.realtime.RealtimeContext;
+import co.cask.cdap.template.etl.api.realtime.RealtimeSource;
+import co.cask.cdap.template.etl.api.realtime.SourceState;
 import co.cask.cdap.template.etl.plugin.realtime.jms.JmsProvider;
 import co.cask.cdap.template.etl.plugin.realtime.jms.JndiBasedJmsProvider;
-import co.cask.cdap.templates.etl.api.Emitter;
-import co.cask.cdap.templates.etl.api.PipelineConfigurer;
-import co.cask.cdap.templates.etl.api.config.ETLStage;
-import co.cask.cdap.templates.etl.api.realtime.RealtimeContext;
-import co.cask.cdap.templates.etl.api.realtime.RealtimeSource;
-import co.cask.cdap.templates.etl.api.realtime.SourceState;
 import com.google.common.collect.Maps;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -170,7 +169,7 @@ public class JmsSource extends RealtimeSource<StructuredRecord> {
   }
 
   @Override
-  public void configurePipeline(ETLStage stageConfig, PipelineConfigurer pipelineConfigurer) {
+  public void configurePipeline(PipelineConfigurer pipelineConfigurer) {
     pipelineConfigurer.usePluginClass("JMSProvider", Context.INITIAL_CONTEXT_FACTORY, "jmsource.JMSProvider.Context",
       PluginProperties.builder().build());
   }
