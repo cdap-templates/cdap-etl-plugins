@@ -16,12 +16,12 @@ Sources
 TwitterSource
 +++++++++++++
 
-A realtime source that reads data from the Twitter API
+A realtime source plugin for ETL Realtime Template that reads data from the Twitter API provided the oauth keys and tokens.
 
 JmsSource
 +++++++++
 
-A realtime source that consumes from JMS 
+A realtime source pluginf for ETL Realtime Template that consumes data from JMS. 
 
 License and Trademarks
 ----------------------
