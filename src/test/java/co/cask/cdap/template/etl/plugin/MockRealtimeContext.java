@@ -19,7 +19,7 @@ package co.cask.cdap.template.etl.plugin;
 import co.cask.cdap.api.metrics.Metrics;
 import co.cask.cdap.api.templates.AdapterSpecification;
 import co.cask.cdap.api.templates.plugins.PluginProperties;
-import co.cask.cdap.templates.etl.api.realtime.RealtimeContext;
+import co.cask.cdap.template.etl.api.realtime.RealtimeContext;
 import com.google.common.collect.Maps;
 
 import java.util.Map;
