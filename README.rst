@@ -24,7 +24,7 @@ JmsSource
 A realtime source that consumes from JMS 
 
 License and Trademarks
-======================
+++++++++++++++++++++++
 
 Copyright © 2015 Cask Data, Inc.
 
